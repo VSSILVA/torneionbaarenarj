@@ -293,10 +293,10 @@
         <section>
             <h2>Jogos da Fase Classificat&oacute;ria</h2>
             <div class="rodada-container">
-                
                 <div class="rodada-card">
-                    <div class="rodada-title">1&ordf; RODADA</div>
+                    <div class="rodada-title">1&ordf; RODADA - 28/06/2026</div>
                     <div class="confronto">
+						<span class="divisor-x" id="j1_h"></span>
                         <div class="time-logo-container"><img src="" id="j1_m_logo" class="logo-img" alt=""></div>
                         <span class="placar-input" id="j1_m"></span>
 						<span class="divisor-x">x</span>
@@ -304,6 +304,7 @@
 						<div class="time-logo-container"><img src="" id="j1_v_logo" class="logo-img" alt=""></div>
                     </div>
                     <div class="confronto">
+						<span class="divisor-x" id="j2_h"></span>
                         <div class="time-logo-container"><img src="" id="j2_m_logo" class="logo-img" alt=""></div>
                         <span class="placar-input" id="j2_m"></span>
                         <span class="divisor-x">x</span>
@@ -315,6 +316,7 @@
                 <div class="rodada-card">
                     <div class="rodada-title">2&ordf; RODADA</div>
                     <div class="confronto">
+						<span class="divisor-x" id="j3_h"></span>
                         <div class="time-logo-container"><img src="" id="j3_m_logo" class="logo-img" alt=""></div>
                         <span class="placar-input" id="j3_m"></span>
                         <span class="divisor-x">x</span>
@@ -322,6 +324,7 @@
                         <div class="time-logo-container"><img src="" id="j3_v_logo" class="logo-img" alt=""></div>
                     </div>
                     <div class="confronto">
+						<span class="divisor-x" id="j4_h"></span>
                         <div class="time-logo-container"><img src="" id="j4_m_logo" class="logo-img" alt=""></div>
                         <span class="placar-input" id="j4_m"></span>
                         <span class="divisor-x">x</span>
@@ -333,6 +336,7 @@
                 <div class="rodada-card">
                     <div class="rodada-title">3&ordf; RODADA</div>
                     <div class="confronto">
+						<span class="divisor-x" id="j5_h"></span>
                         <div class="time-logo-container"><img src="" id="j5_m_logo" class="logo-img" alt=""></div>
                         <span class="placar-input" id="j5_m"></span>
                         <span class="divisor-x">x</span>
@@ -340,6 +344,7 @@
                         <div class="time-logo-container"><img src="" id="j5_v_logo" class="logo-img" alt=""></div>
                     </div>
                     <div class="confronto">
+						<span class="divisor-x" id="j6_h"></span>
                         <div class="time-logo-container"><img src="" id="j6_m_logo" class="logo-img" alt=""></div>
                         <span class="placar-input" id="j6_m"></span>
                         <span class="divisor-x">x</span>
@@ -347,14 +352,16 @@
                         <div class="time-logo-container"><img src="" id="j6_v_logo" class="logo-img" alt=""></div>
                     </div>
                 </div>
-
             </div>
         </section>
 
         <section>
             <h2>Fase Final (Playoffs)</h2>
-            <div class="playoffs-grid">
-                
+            <p style="font-size: 0.8rem; margin-top: 15px; color: #94a3b8;">
+                AGUARDANDO A CONCLUSÃO DA FASE CLASSIFICATÓRIA
+            </p>
+            <!-- AGUARDANDO A CONCLUSAO DA FASE CLASSIFICATÓRIA
+			<div class="playoffs-grid">
                 <div class="rodada-card fase-final-card">
                     <div class="rodada-title" style="background:#475569">DISPUTA DE 3&deg; LUGAR</div>
                     <div class="confronto">
@@ -362,9 +369,9 @@
                             <img src="" id="t3_logo" class="logo-img" alt="">
                             <span id="t3_lugar">3&deg; Colocado</span>
                         </div>
-                        <span class="placar-input">
+                        <span class="placar-input"></span>
                         <span class="divisor-x">x</span>
-                        <span class="placar-input">
+                        <span class="placar-input"></span>
                         <div class="playoffs-team-info">
                             <img src="" id="t4_logo" class="logo-img" alt="">
                             <span id="t4_lugar">4&deg; Colocado</span>
@@ -379,16 +386,16 @@
                             <img src="" id="t1_logo" class="logo-img" alt="">
                             <span id="t1_lugar">1&deg; Colocado</span>
                         </div>
-                        <span class="placar-input">
+                        <span class="placar-input"></span>
                         <span class="divisor-x">x</span>
-                        <span class="placar-input">
+                        <span class="placar-input"></span>
                         <div class="playoffs-team-info">
                             <img src="" id="t2_logo" class="logo-img" alt="">
                             <span id="t2_lugar">2&deg; Colocado</span>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </section>
 		
         <section>
@@ -418,12 +425,12 @@
 
         // Mapeamento dos confrontos da tabela html
         const estruturaJogos = [
-            { idM: 'j1_m', idV: 'j1_v', mandante: 'A', visitante: 'B', placarMandante: '', placarVisitante: '' },
-            { idM: 'j2_m', idV: 'j2_v', mandante: 'C', visitante: 'D', placarMandante: '', placarVisitante: '' },
-            { idM: 'j3_m', idV: 'j3_v', mandante: 'A', visitante: 'C', placarMandante: '', placarVisitante: '' },
-            { idM: 'j4_m', idV: 'j4_v', mandante: 'B', visitante: 'D', placarMandante: '', placarVisitante: '' },
-            { idM: 'j5_m', idV: 'j5_v', mandante: 'A', visitante: 'D', placarMandante: '', placarVisitante: '' },
-            { idM: 'j6_m', idV: 'j6_v', mandante: 'B', visitante: 'C', placarMandante: '', placarVisitante: '' }
+            { idM: 'j1_m', idV: 'j1_v', idH: 'j1_h', horario: '12:10h', mandante: 'A', visitante: 'B', placarMandante: '', placarVisitante: '' },
+            { idM: 'j2_m', idV: 'j2_v', idH: 'j2_h', horario: '13:40h', mandante: 'C', visitante: 'D', placarMandante: '', placarVisitante: '' },
+            { idM: 'j3_m', idV: 'j3_v', idH: 'j3_h', horario: '12:10h', mandante: 'A', visitante: 'C', placarMandante: '', placarVisitante: '' },
+            { idM: 'j4_m', idV: 'j4_v', idH: 'j4_h', horario: '13:40h', mandante: 'B', visitante: 'D', placarMandante: '', placarVisitante: '' },
+            { idM: 'j5_m', idV: 'j5_v', idH: 'j5_h', horario: '12:10h', mandante: 'A', visitante: 'D', placarMandante: '', placarVisitante: '' },
+            { idM: 'j6_m', idV: 'j6_v', idH: 'j6_h', horario: '13:40h', mandante: 'B', visitante: 'C', placarMandante: '', placarVisitante: '' }
         ];
 
         // Fun&ccedil;&atilde;o interna para injetar as logos na agenda de jogos ao carregar a p&aacute;gina
@@ -431,6 +438,7 @@
             estruturaJogos.forEach(jogo => {
                 document.getElementById(`${jogo.idM}`).innerText = jogo.placarMandante;
                 document.getElementById(`${jogo.idV}`).innerText = jogo.placarVisitante;
+                document.getElementById(`${jogo.idH}`).innerText = jogo.horario;
                 document.getElementById(`${jogo.idM}_logo`).src = equipes[jogo.mandante].logo;
                 document.getElementById(`${jogo.idV}_logo`).src = equipes[jogo.visitante].logo;
             });
