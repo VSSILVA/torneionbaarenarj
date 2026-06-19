@@ -191,6 +191,7 @@
 
         .placar-input {
             width: 50px;
+            height: 40px;
             text-align: center;
             padding: 6px;
             background-color: var(--secondary-color);
@@ -297,16 +298,16 @@
                     <div class="rodada-title">1&ordf; RODADA</div>
                     <div class="confronto">
                         <div class="time-logo-container"><img src="" id="j1_m_logo" class="logo-img" alt=""></div>
-                        <input type="number" min="0" class="placar-input" id="j1_m" onchange="atualizarCampeonato()">
-                        <span class="divisor-x">x</span>
-                        <input type="number" min="0" class="placar-input" id="j1_v" onchange="atualizarCampeonato()">
-                        <div class="time-logo-container"><img src="" id="j1_v_logo" class="logo-img" alt=""></div>
+                        <span class="placar-input" id="j1_m"></span>
+						<span class="divisor-x">x</span>
+                        <span class="placar-input" id="j1_v"></span>
+						<div class="time-logo-container"><img src="" id="j1_v_logo" class="logo-img" alt=""></div>
                     </div>
                     <div class="confronto">
                         <div class="time-logo-container"><img src="" id="j2_m_logo" class="logo-img" alt=""></div>
-                        <input type="number" min="0" class="placar-input" id="j2_m" onchange="atualizarCampeonato()">
+                        <span class="placar-input" id="j2_m"></span>
                         <span class="divisor-x">x</span>
-                        <input type="number" min="0" class="placar-input" id="j2_v" onchange="atualizarCampeonato()">
+                        <span class="placar-input" id="j2_v"></span>
                         <div class="time-logo-container"><img src="" id="j2_v_logo" class="logo-img" alt=""></div>
                     </div>
                 </div>
@@ -315,16 +316,16 @@
                     <div class="rodada-title">2&ordf; RODADA</div>
                     <div class="confronto">
                         <div class="time-logo-container"><img src="" id="j3_m_logo" class="logo-img" alt=""></div>
-                        <input type="number" min="0" class="placar-input" id="j3_m" onchange="atualizarCampeonato()">
+                        <span class="placar-input" id="j3_m"></span>
                         <span class="divisor-x">x</span>
-                        <input type="number" min="0" class="placar-input" id="j3_v" onchange="atualizarCampeonato()">
+                        <span class="placar-input" id="j3_v"></span>
                         <div class="time-logo-container"><img src="" id="j3_v_logo" class="logo-img" alt=""></div>
                     </div>
                     <div class="confronto">
                         <div class="time-logo-container"><img src="" id="j4_m_logo" class="logo-img" alt=""></div>
-                        <input type="number" min="0" class="placar-input" id="j4_m" onchange="atualizarCampeonato()">
+                        <span class="placar-input" id="j4_m"></span>
                         <span class="divisor-x">x</span>
-                        <input type="number" min="0" class="placar-input" id="j4_v" onchange="atualizarCampeonato()">
+                        <span class="placar-input" id="j4_v"></span>
                         <div class="time-logo-container"><img src="" id="j4_v_logo" class="logo-img" alt=""></div>
                     </div>
                 </div>
@@ -333,16 +334,16 @@
                     <div class="rodada-title">3&ordf; RODADA</div>
                     <div class="confronto">
                         <div class="time-logo-container"><img src="" id="j5_m_logo" class="logo-img" alt=""></div>
-                        <input type="number" min="0" class="placar-input" id="j5_m" onchange="atualizarCampeonato()">
+                        <span class="placar-input" id="j5_m"></span>
                         <span class="divisor-x">x</span>
-                        <input type="number" min="0" class="placar-input" id="j5_v" onchange="atualizarCampeonato()">
+                        <span class="placar-input" id="j5_v"></span>
                         <div class="time-logo-container"><img src="" id="j5_v_logo" class="logo-img" alt=""></div>
                     </div>
                     <div class="confronto">
                         <div class="time-logo-container"><img src="" id="j6_m_logo" class="logo-img" alt=""></div>
-                        <input type="number" min="0" class="placar-input" id="j6_m" onchange="atualizarCampeonato()">
+                        <span class="placar-input" id="j6_m"></span>
                         <span class="divisor-x">x</span>
-                        <input type="number" min="0" class="placar-input" id="j6_v" onchange="atualizarCampeonato()">
+                        <span class="placar-input" id="j6_v"></span>
                         <div class="time-logo-container"><img src="" id="j6_v_logo" class="logo-img" alt=""></div>
                     </div>
                 </div>
@@ -361,9 +362,9 @@
                             <img src="" id="t3_logo" class="logo-img" alt="">
                             <span id="t3_lugar">3&deg; Colocado</span>
                         </div>
-                        <input type="number" min="0" class="placar-input">
+                        <span class="placar-input">
                         <span class="divisor-x">x</span>
-                        <input type="number" min="0" class="placar-input">
+                        <span class="placar-input">
                         <div class="playoffs-team-info">
                             <img src="" id="t4_logo" class="logo-img" alt="">
                             <span id="t4_lugar">4&deg; Colocado</span>
@@ -378,9 +379,9 @@
                             <img src="" id="t1_logo" class="logo-img" alt="">
                             <span id="t1_lugar">1&deg; Colocado</span>
                         </div>
-                        <input type="number" min="0" class="placar-input">
+                        <span class="placar-input">
                         <span class="divisor-x">x</span>
-                        <input type="number" min="0" class="placar-input">
+                        <span class="placar-input">
                         <div class="playoffs-team-info">
                             <img src="" id="t2_logo" class="logo-img" alt="">
                             <span id="t2_lugar">2&deg; Colocado</span>
@@ -400,7 +401,7 @@
 				<li>O jogo ser&aacute; dividido em 4 quartos de 17 minutos corridos, 5 minutos de prorroga&ccedil;&atilde;o, se necess&aacute;rio</li>
 				<li>Todos os times se enfrentam na fase classificat&oacute;ria. O 1&deg e o 2&deg se enfrentam na final, assim como o 3&deg e o 4&deg na disputa do 3&deg lugar</li>
 				<li>Em caso de times com empate na tabela de classifica&ccedil;&atilde;o, o crit&eacute;rio de desempate ser&aacute;, nesta ordem, o saldo de cestas e o confronto direto</li>
-				<li>Serão 4 dias de torneio</li>
+				<li>Serã¯ 4 dias de torneio</li>
 				<li>Ser&aacute; constru&iacute;do um site informativo para acompanhamento das equipes</li>
             </ul>			
 		</section>
@@ -417,17 +418,19 @@
 
         // Mapeamento dos confrontos da tabela html
         const estruturaJogos = [
-            { idM: 'j1_m', idV: 'j1_v', mandante: 'A', visitante: 'B' },
-            { idM: 'j2_m', idV: 'j2_v', mandante: 'C', visitante: 'D' },
-            { idM: 'j3_m', idV: 'j3_v', mandante: 'A', visitante: 'C' },
-            { idM: 'j4_m', idV: 'j4_v', mandante: 'B', visitante: 'D' },
-            { idM: 'j5_m', idV: 'j5_v', mandante: 'A', visitante: 'D' },
-            { idM: 'j6_m', idV: 'j6_v', mandante: 'B', visitante: 'C' }
+            { idM: 'j1_m', idV: 'j1_v', mandante: 'A', visitante: 'B', placarMandante: '', placarVisitante: '' },
+            { idM: 'j2_m', idV: 'j2_v', mandante: 'C', visitante: 'D', placarMandante: '', placarVisitante: '' },
+            { idM: 'j3_m', idV: 'j3_v', mandante: 'A', visitante: 'C', placarMandante: '', placarVisitante: '' },
+            { idM: 'j4_m', idV: 'j4_v', mandante: 'B', visitante: 'D', placarMandante: '', placarVisitante: '' },
+            { idM: 'j5_m', idV: 'j5_v', mandante: 'A', visitante: 'D', placarMandante: '', placarVisitante: '' },
+            { idM: 'j6_m', idV: 'j6_v', mandante: 'B', visitante: 'C', placarMandante: '', placarVisitante: '' }
         ];
 
         // Fun&ccedil;&atilde;o interna para injetar as logos na agenda de jogos ao carregar a p&aacute;gina
         function inicializarLogosAgenda() {
             estruturaJogos.forEach(jogo => {
+                document.getElementById(`${jogo.idM}`).innerText = jogo.placarMandante;
+                document.getElementById(`${jogo.idV}`).innerText = jogo.placarVisitante;
                 document.getElementById(`${jogo.idM}_logo`).src = equipes[jogo.mandante].logo;
                 document.getElementById(`${jogo.idV}_logo`).src = equipes[jogo.visitante].logo;
             });
@@ -442,8 +445,8 @@
 
             // Processa cada jogo digitado
             estruturaJogos.forEach(jogo => {
-                let valM = document.getElementById(jogo.idM).value;
-                let valV = document.getElementById(jogo.idV).value;
+                let valM = document.getElementById(jogo.idM).innerText;
+                let valV = document.getElementById(jogo.idV).innerText;
 
                 if (valM !== "" && valV !== "") {
                     let ptsM = parseInt(valM);
@@ -480,7 +483,7 @@
                 listaEquipes.push(dados[chave]);
             }
 
-            // Ordena&ccedil;&atilde;o: 1º Pontos, 2º Saldo de Cestas, 3º Pontos Feitos
+            // Ordena&ccedil;&atilde;o: 1Âº Pontos, 2Âº Saldo de Cestas, 3Âº Pontos Feitos
             listaEquipes.sort((a, b) => {
                 if (b.pontos !== a.pontos) return b.pontos - a.pontos;
                 if (b.sc !== a.sc) return b.sc - a.sc;
