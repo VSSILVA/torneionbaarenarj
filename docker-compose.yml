@@ -1,0 +1,9 @@
+services:
+  basketmaster:
+    build: .
+    container_name: basketmaster-web
+    ports:
+      - "127.0.0.1:8043:80"
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
