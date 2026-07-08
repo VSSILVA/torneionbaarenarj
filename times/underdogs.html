@@ -332,6 +332,36 @@
             z-index: 1;
         }
 
+        .profile-icon {
+            display: block;
+            width: 39px;
+            height: 44px;
+            position: relative;
+        }
+
+        .profile-icon::before,
+        .profile-icon::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #94a3b8;
+        }
+
+        .profile-icon::before {
+            top: 7px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+        }
+
+        .profile-icon::after {
+            bottom: 6px;
+            width: 28px;
+            height: 16px;
+            border-radius: 16px 16px 6px 6px;
+        }
+
         .player-photo .no-number {
             max-width: 58px;
             font-size: 0.72rem;
@@ -438,7 +468,7 @@
                     </div>
                 </div>
                 <div class="team-photo">
-                    <span>Foto do time</span>
+                    <span>Em breve</span>
                     <img src="../media/underdogs/foto-time.webp" alt="Foto do time Underdogs" onerror="this.parentElement.classList.add('is-empty');">
                 </div>
             </div>
@@ -457,7 +487,7 @@
             <h2>Elenco</h2>
             <div class="roster-grid">
                 <article class="player-card">
-                    <div class="player-photo"><span>9</span><img src="../media/underdogs/baba.webp" alt="Baba" onerror="this.classList.add('is-missing');"></div>
+                    <div class="player-photo"><span class="profile-icon" aria-hidden="true"></span><img src="../media/underdogs/baba.webp" alt="Baba" onerror="this.classList.add('is-missing');"></div>
                     <div>
                         <div class="player-name">Baba</div>
                         <div class="player-position">Armador</div>
@@ -465,7 +495,7 @@
                     </div>
                 </article>
                 <article class="player-card">
-                    <div class="player-photo"><span>3</span><img src="../media/underdogs/juarez.webp" alt="Juarez" onerror="this.classList.add('is-missing');"></div>
+                    <div class="player-photo"><span class="profile-icon" aria-hidden="true"></span><img src="../media/underdogs/juarez.webp" alt="Juarez" onerror="this.classList.add('is-missing');"></div>
                     <div>
                         <div class="player-name">Juarez</div>
                         <div class="player-position">Armador</div>
@@ -473,7 +503,7 @@
                     </div>
                 </article>
                 <article class="player-card">
-                    <div class="player-photo"><span>66</span><img src="../media/underdogs/amendoim.jpg" alt="Amendoim" onerror="this.classList.add('is-missing');"></div>
+                    <div class="player-photo"><span class="profile-icon" aria-hidden="true"></span><img src="../media/underdogs/amendoim.jpg" alt="Amendoim" onerror="this.classList.add('is-missing');"></div>
                     <div>
                         <div class="player-name">Amendoim</div>
                         <div class="player-position">Ala</div>
@@ -481,7 +511,7 @@
                     </div>
                 </article>
                 <article class="player-card">
-                    <div class="player-photo"><span>13</span><img src="../media/underdogs/ricardo.webp" alt="Ricardo" onerror="this.classList.add('is-missing');"></div>
+                    <div class="player-photo"><span class="profile-icon" aria-hidden="true"></span><img src="../media/underdogs/ricardo.webp" alt="Ricardo" onerror="this.classList.add('is-missing');"></div>
                     <div>
                         <div class="player-name">Ricardo</div>
                         <div class="player-position">Ala</div>
@@ -489,7 +519,7 @@
                     </div>
                 </article>
                 <article class="player-card">
-                    <div class="player-photo"><span class="no-number">Sem número</span><img src="../media/underdogs/andre-jenz.webp" alt="André Jenz" onerror="this.classList.add('is-missing');"></div>
+                    <div class="player-photo"><span class="profile-icon" aria-hidden="true"></span><img src="../media/underdogs/andre-jenz.webp" alt="André Jenz" onerror="this.classList.add('is-missing');"></div>
                     <div>
                         <div class="player-name">André Jenz</div>
                         <div class="player-position">Ala</div>
@@ -497,7 +527,7 @@
                     </div>
                 </article>
                 <article class="player-card">
-                    <div class="player-photo"><span>7</span><img src="../media/underdogs/andre-ricarte.webp" alt="André Ricarte" onerror="this.classList.add('is-missing');"></div>
+                    <div class="player-photo"><span class="profile-icon" aria-hidden="true"></span><img src="../media/underdogs/andre-ricarte.webp" alt="André Ricarte" onerror="this.classList.add('is-missing');"></div>
                     <div>
                         <div class="player-name">André Ricarte</div>
                         <div class="player-position">Ala</div>
@@ -505,7 +535,7 @@
                     </div>
                 </article>
                 <article class="player-card">
-                    <div class="player-photo"><span>23</span><img src="../media/underdogs/matheus.webp" alt="Matheus" onerror="this.classList.add('is-missing');"></div>
+                    <div class="player-photo"><span class="profile-icon" aria-hidden="true"></span><img src="../media/underdogs/matheus.webp" alt="Matheus" onerror="this.classList.add('is-missing');"></div>
                     <div>
                         <div class="player-name">Matheus</div>
                         <div class="player-position">Ala</div>
@@ -513,7 +543,7 @@
                     </div>
                 </article>
                 <article class="player-card">
-                    <div class="player-photo"><span>34</span><img src="../media/underdogs/will.webp" alt="Will" onerror="this.classList.add('is-missing');"></div>
+                    <div class="player-photo"><span class="profile-icon" aria-hidden="true"></span><img src="../media/underdogs/will.webp" alt="Will" onerror="this.classList.add('is-missing');"></div>
                     <div>
                         <div class="player-name">Will</div>
                         <div class="player-position">Pivô</div>
@@ -521,7 +551,7 @@
                     </div>
                 </article>
                 <article class="player-card">
-                    <div class="player-photo"><span>00</span><img src="../media/underdogs/joao.webp" alt="João" onerror="this.classList.add('is-missing');"></div>
+                    <div class="player-photo"><span class="profile-icon" aria-hidden="true"></span><img src="../media/underdogs/joao.webp" alt="João" onerror="this.classList.add('is-missing');"></div>
                     <div>
                         <div class="player-name">João</div>
                         <div class="player-position">Pivô</div>
@@ -529,7 +559,7 @@
                     </div>
                 </article>
                 <article class="player-card">
-                    <div class="player-photo"><span class="no-number">Sem número</span><img src="../media/underdogs/mega.jpg" alt="Mega" onerror="this.classList.add('is-missing');"></div>
+                    <div class="player-photo"><span class="profile-icon" aria-hidden="true"></span><img src="../media/underdogs/mega.jpg" alt="Mega" onerror="this.classList.add('is-missing');"></div>
                     <div>
                         <div class="player-name">Mega</div>
                         <div class="player-position">Pivô</div>

@@ -332,6 +332,36 @@
             z-index: 1;
         }
 
+        .profile-icon {
+            display: block;
+            width: 39px;
+            height: 44px;
+            position: relative;
+        }
+
+        .profile-icon::before,
+        .profile-icon::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #94a3b8;
+        }
+
+        .profile-icon::before {
+            top: 7px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+        }
+
+        .profile-icon::after {
+            bottom: 6px;
+            width: 28px;
+            height: 16px;
+            border-radius: 16px 16px 6px 6px;
+        }
+
         .player-photo .no-number {
             max-width: 58px;
             font-size: 0.72rem;
@@ -438,7 +468,7 @@
                     </div>
                 </div>
                 <div class="team-photo">
-                    <span>Foto do time</span>
+                    <span>Em breve</span>
                     <img src="../media/tadallas-mavericks/foto-time.jpg" alt="Foto do time Tadallas Mavericks" onerror="this.parentElement.classList.add('is-empty');">
                 </div>
             </div>
@@ -457,7 +487,7 @@
             <h2>Elenco</h2>
             <div class="roster-grid">
                 <article class="player-card">
-                    <div class="player-photo"><span class="no-number">Sem número</span><img src="../media/tadallas-mavericks/black.jpg" alt="Black" onerror="this.classList.add('is-missing');"></div>
+                    <div class="player-photo"><span class="profile-icon" aria-hidden="true"></span><img src="../media/tadallas-mavericks/black.jpg" alt="Black" onerror="this.classList.add('is-missing');"></div>
                     <div>
                         <div class="player-name">Black</div>
                         <div class="player-position">Ala</div>
@@ -465,7 +495,7 @@
                     </div>
                 </article>
                 <article class="player-card">
-                    <div class="player-photo"><span class="no-number">Sem número</span><img src="../media/tadallas-mavericks/leandro.jpg" alt="Leandro" onerror="this.classList.add('is-missing');"></div>
+                    <div class="player-photo"><span class="profile-icon" aria-hidden="true"></span><img src="../media/tadallas-mavericks/leandro.jpg" alt="Leandro" onerror="this.classList.add('is-missing');"></div>
                     <div>
                         <div class="player-name">Leandro</div>
                         <div class="player-position">Ala</div>
@@ -473,7 +503,7 @@
                     </div>
                 </article>
                 <article class="player-card">
-                    <div class="player-photo"><span class="no-number">Sem número</span><img src="../media/tadallas-mavericks/erick.jpg" alt="Erick" onerror="this.classList.add('is-missing');"></div>
+                    <div class="player-photo"><span class="profile-icon" aria-hidden="true"></span><img src="../media/tadallas-mavericks/erick.jpg" alt="Erick" onerror="this.classList.add('is-missing');"></div>
                     <div>
                         <div class="player-name">Erick</div>
                         <div class="player-position">Armador</div>
@@ -481,7 +511,7 @@
                     </div>
                 </article>
                 <article class="player-card">
-                    <div class="player-photo"><span class="no-number">Sem número</span><img src="../media/tadallas-mavericks/bomba.jpg" alt="Bomba" onerror="this.classList.add('is-missing');"></div>
+                    <div class="player-photo"><span class="profile-icon" aria-hidden="true"></span><img src="../media/tadallas-mavericks/bomba.jpg" alt="Bomba" onerror="this.classList.add('is-missing');"></div>
                     <div>
                         <div class="player-name">Bomba</div>
                         <div class="player-position">Ala</div>
@@ -489,7 +519,7 @@
                     </div>
                 </article>
                 <article class="player-card">
-                    <div class="player-photo"><span class="no-number">Sem número</span><img src="../media/tadallas-mavericks/max.jpg" alt="Max" onerror="this.classList.add('is-missing');"></div>
+                    <div class="player-photo"><span class="profile-icon" aria-hidden="true"></span><img src="../media/tadallas-mavericks/max.jpg" alt="Max" onerror="this.classList.add('is-missing');"></div>
                     <div>
                         <div class="player-name">Max</div>
                         <div class="player-position">-</div>
@@ -497,7 +527,7 @@
                     </div>
                 </article>
                 <article class="player-card">
-                    <div class="player-photo"><span class="no-number">Sem número</span><img src="../media/tadallas-mavericks/pierre.jpg" alt="Pierre" onerror="this.classList.add('is-missing');"></div>
+                    <div class="player-photo"><span class="profile-icon" aria-hidden="true"></span><img src="../media/tadallas-mavericks/pierre.jpg" alt="Pierre" onerror="this.classList.add('is-missing');"></div>
                     <div>
                         <div class="player-name">Pierre</div>
                         <div class="player-position">-</div>
@@ -505,7 +535,7 @@
                     </div>
                 </article>
                 <article class="player-card">
-                    <div class="player-photo"><span class="no-number">Sem número</span><img src="../media/tadallas-mavericks/joao.jpg" alt="João" onerror="this.classList.add('is-missing');"></div>
+                    <div class="player-photo"><span class="profile-icon" aria-hidden="true"></span><img src="../media/tadallas-mavericks/joao.jpg" alt="João" onerror="this.classList.add('is-missing');"></div>
                     <div>
                         <div class="player-name">João</div>
                         <div class="player-position">-</div>
@@ -513,7 +543,7 @@
                     </div>
                 </article>
                 <article class="player-card">
-                    <div class="player-photo"><span class="no-number">Sem número</span><img src="../media/tadallas-mavericks/fabiano.jpg" alt="Fabiano" onerror="this.classList.add('is-missing');"></div>
+                    <div class="player-photo"><span class="profile-icon" aria-hidden="true"></span><img src="../media/tadallas-mavericks/fabiano.jpg" alt="Fabiano" onerror="this.classList.add('is-missing');"></div>
                     <div>
                         <div class="player-name">Fabiano</div>
                         <div class="player-position">Ala pivô</div>
@@ -521,7 +551,7 @@
                     </div>
                 </article>
                 <article class="player-card">
-                    <div class="player-photo"><span class="no-number">Sem número</span><img src="../media/tadallas-mavericks/salsicha.jpg" alt="Salsicha" onerror="this.classList.add('is-missing');"></div>
+                    <div class="player-photo"><span class="profile-icon" aria-hidden="true"></span><img src="../media/tadallas-mavericks/salsicha.jpg" alt="Salsicha" onerror="this.classList.add('is-missing');"></div>
                     <div>
                         <div class="player-name">Salsicha</div>
                         <div class="player-position">-</div>
