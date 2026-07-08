@@ -5,6 +5,8 @@ RUN rm -rf /usr/share/nginx/html/* \
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY index.html /usr/share/nginx/html/index.html
+COPY times/ /usr/share/nginx/html/times/
+COPY media/ /usr/share/nginx/html/media/
 
 EXPOSE 80
 

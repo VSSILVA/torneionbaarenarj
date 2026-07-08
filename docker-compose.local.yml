@@ -1,0 +1,11 @@
+services:
+  basketmaster-local:
+    build: .
+    container_name: basketmaster-local
+    ports:
+      - "127.0.0.1:8088:80"
+    volumes:
+      - ./:/usr/share/nginx/html:ro
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true

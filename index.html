@@ -99,6 +99,27 @@
             gap: 12px;
         }
 
+        .team-page-link {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .team-page-link:hover {
+            color: var(--primary-color);
+        }
+
+        .team-logo-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            line-height: 0;
+        }
+
+        .team-logo-link:hover .logo-img {
+            box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.25);
+        }
+
         /* Tabela de Classifica&ccedil;&atilde;o */
         .table-responsive {
             overflow-x: auto;
@@ -222,7 +243,6 @@
         }
 
         .fase-final-card {
-            border: 1px solid var(--primary-color);
             background: linear-gradient(to bottom, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.8));
         }
 
@@ -425,14 +445,31 @@
             { idM: 'j6_m', idV: 'j6_v', idH: 'j6_h', horario: '13:40h', mandante: 'B', visitante: 'C', placarMandante: '', placarVisitante: '' }
         ];
 
+        const paginasEquipes = {
+            A: 'times/uptown-rj.html',
+            B: 'times/tadallas-mavericks.html',
+            C: 'times/zona-norte.html',
+            D: 'times/underdogs.html'
+        };
+
+        function montarLogoEquipe(chave, classe = 'logo-img') {
+            const equipe = equipes[chave];
+            const pagina = paginasEquipes[chave];
+            const logo = `<img src="${equipe.logo}" class="${classe}" alt="${equipe.nome}">`;
+
+            return pagina
+                ? `<a class="team-logo-link" href="${pagina}" aria-label="Ver página do ${equipe.nome}">${logo}</a>`
+                : logo;
+        }
+
         // Fun&ccedil;&atilde;o interna para injetar as logos na agenda de jogos ao carregar a p&aacute;gina
         function inicializarLogosAgenda() {
             estruturaJogos.forEach(jogo => {
                 document.getElementById(`${jogo.idM}`).innerText = jogo.placarMandante;
                 document.getElementById(`${jogo.idV}`).innerText = jogo.placarVisitante;
                 document.getElementById(`${jogo.idH}`).innerText = jogo.horario;
-                document.getElementById(`${jogo.idM}_logo`).src = equipes[jogo.mandante].logo;
-                document.getElementById(`${jogo.idV}_logo`).src = equipes[jogo.visitante].logo;
+                document.getElementById(`${jogo.idM}_logo`).parentElement.innerHTML = montarLogoEquipe(jogo.mandante);
+                document.getElementById(`${jogo.idV}_logo`).parentElement.innerHTML = montarLogoEquipe(jogo.visitante);
             });
         }
 
@@ -493,12 +530,15 @@
             // Renderiza a tabela na tela incluindo a logo
             let htmlTabela = "";
             listaEquipes.forEach(eq => {
+                const chaveEquipe = Object.keys(equipes).find(chave => equipes[chave].nome === eq.nome);
+                const paginaEquipe = paginasEquipes[chaveEquipe];
+                const nomeEquipe = paginaEquipe ? `<a class="team-page-link" href="${paginaEquipe}">${eq.nome}</a>` : `<span>${eq.nome}</span>`;
                 htmlTabela += `
                     <tr>
                         <td class="team-col">
                             <div class="table-logo">
-                                <img src="${eq.logo}" class="logo-img" alt="${eq.nome}">
-                                <span>${eq.nome}</span>
+                                ${chaveEquipe ? montarLogoEquipe(chaveEquipe) : `<img src="${eq.logo}" class="logo-img" alt="${eq.nome}">`}
+                                ${nomeEquipe}
                             </div>
                         </td>
                         <td class="highlight-points">${eq.pontos}</td>
