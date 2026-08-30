@@ -261,15 +261,22 @@
             gap: 4px;
             font-size: 0.8rem;
             color: #cbd5e1;
-            width: 80px;
+            width: 96px;
             text-align: center;
         }
 
-        .playoffs-team-info span {
-            max-width: 80px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+        .fase-final-card .confronto {
+            gap: 8px;
+        }
+
+        .playoffs-team-info a {
+            color: inherit;
+            text-decoration: none;
+            line-height: 1.15;
+        }
+
+        .playoffs-team-info a:hover {
+            color: var(--primary-color);
         }
 
         /* Regras do torneio */
@@ -391,13 +398,13 @@
                     <div class="confronto">
                         <span class="divisor-x">12:10h</span>
                         <div class="playoffs-team-info">
-                            <span>A definir</span>
+                            <a href="times/underdogs.html">Underdogs</a>
                         </div>
                         <span class="placar-input"></span>
                         <span class="divisor-x">x</span>
                         <span class="placar-input"></span>
                         <div class="playoffs-team-info">
-                            <span>A definir</span>
+                            <a href="times/tadallas-mavericks.html">Tadallas Mavericks</a>
                         </div>
                     </div>
                 </div>
@@ -407,13 +414,13 @@
                     <div class="confronto">
                         <span class="divisor-x">13:40h</span>
                         <div class="playoffs-team-info">
-                            <span>A definir</span>
+                            <a href="times/zona-norte.html">Zona Norte 51ers</a>
                         </div>
                         <span class="placar-input"></span>
                         <span class="divisor-x">x</span>
                         <span class="placar-input"></span>
                         <div class="playoffs-team-info">
-                            <span>A definir</span>
+                            <a href="times/uptown-rj.html">Uptown RJ</a>
                         </div>
                     </div>
                 </div>
@@ -449,8 +456,8 @@
             { idM: 'j2_m', idV: 'j2_v', idH: 'j2_h', horario: '13:40h', mandante: 'C', visitante: 'D', placarMandante: '43', placarVisitante: '21' },
             { idM: 'j3_m', idV: 'j3_v', idH: 'j3_h', horario: '12:10h', mandante: 'A', visitante: 'C', placarMandante: '67', placarVisitante: '77' },
             { idM: 'j4_m', idV: 'j4_v', idH: 'j4_h', horario: '13:40h', mandante: 'B', visitante: 'D', placarMandante: '39', placarVisitante: '34' },
-            { idM: 'j5_m', idV: 'j5_v', idH: 'j5_h', horario: '12:10h', mandante: 'B', visitante: 'C', placarMandante: '', placarVisitante: '' },
-            { idM: 'j6_m', idV: 'j6_v', idH: 'j6_h', horario: '13:40h', mandante: 'A', visitante: 'D', placarMandante: '', placarVisitante: '' }
+            { idM: 'j5_m', idV: 'j5_v', idH: 'j5_h', horario: '12:10h', mandante: 'B', visitante: 'C', placarMandante: '36', placarVisitante: '68' },
+            { idM: 'j6_m', idV: 'j6_v', idH: 'j6_h', horario: '13:40h', mandante: 'A', visitante: 'D', placarMandante: '87', placarVisitante: '70' }
         ];
 
         const paginasEquipes = {
