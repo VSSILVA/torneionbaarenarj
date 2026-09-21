@@ -1,5 +1,7 @@
 # Sistema de scout do Torneio NBA Arena RJ
 
+Documento relacionado: [Reformulação do site](reformulacao-site.md).
+
 ## Objetivo
 
 Criar um sistema simples e rapido para uma unica pessoa operar a mesa, acompanhar o jogo e registrar estatisticas ao vivo. Os dados devem alimentar automaticamente o site do torneio com placar, estatisticas, destaques e MVP da partida.
