@@ -163,27 +163,25 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 38px;
-            height: 38px;
-            margin-top: 0.75rem;
+            width: 28px;
+            height: 28px;
+            margin-top: 0.65rem;
             position: relative;
-            border: 1px solid #fbbf24;
+            border: 1px solid #92400e;
             border-radius: 50%;
-            background: linear-gradient(145deg, #fcd34d, #d97706);
-            box-shadow: 0 5px 14px rgba(245, 158, 11, 0.28);
+            background:
+                radial-gradient(ellipse at -8% 50%, transparent 53%, #78350f 55%, #78350f 60%, transparent 62%),
+                radial-gradient(ellipse at 108% 50%, transparent 53%, #78350f 55%, #78350f 60%, transparent 62%),
+                linear-gradient(90deg, transparent 46%, #78350f 47%, #78350f 53%, transparent 54%),
+                linear-gradient(0deg, transparent 46%, #78350f 47%, #78350f 53%, transparent 54%),
+                linear-gradient(145deg, #fde68a, #d97706);
+            box-shadow: 0 3px 9px rgba(245, 158, 11, 0.2);
             cursor: help;
-        }
-
-        .champion-badge::before {
-            content: "★";
-            color: #422006;
-            font-size: 1rem;
-            line-height: 1;
         }
 
         .champion-tooltip {
             position: absolute;
-            left: calc(100% + 10px);
+            left: calc(100% + 8px);
             top: 50%;
             z-index: 2;
             width: max-content;
