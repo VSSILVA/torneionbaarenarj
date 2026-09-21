@@ -578,7 +578,9 @@
             j3: '2ª RODADA - 02/08/2026',
             j4: '2ª RODADA - 02/08/2026',
             j5: '3ª RODADA - 30/08/2026',
-            j6: '3ª RODADA - 30/08/2026'
+            j6: '3ª RODADA - 30/08/2026',
+            f1: 'DISPUTA DE 3º LUGAR - 20/09/2026',
+            f2: 'GRANDE FINAL - 20/09/2026'
         };
 
         const fallbackEquipes = {
@@ -599,20 +601,25 @@
             { idM: 'j1_m', idV: 'j1_v', idH: 'j1_h', horario: '12:10h', mandante: 'A', visitante: 'B', placarMandante: '82', placarVisitante: '62' },
             { idM: 'j2_m', idV: 'j2_v', idH: 'j2_h', horario: '13:40h', mandante: 'C', visitante: 'D', placarMandante: '43', placarVisitante: '21' },
             { idM: 'j3_m', idV: 'j3_v', idH: 'j3_h', horario: '12:10h', mandante: 'A', visitante: 'C', placarMandante: '67', placarVisitante: '77' },
-            { idM: 'j4_m', idV: 'j4_v', idH: 'j4_h', horario: '13:40h', mandante: 'B', visitante: 'D', placarMandante: '39', placarVisitante: '34' }
+            { idM: 'j4_m', idV: 'j4_v', idH: 'j4_h', horario: '13:40h', mandante: 'B', visitante: 'D', placarMandante: '39', placarVisitante: '34' },
+            { idM: 'j5_m', idV: 'j5_v', idH: 'j5_h', horario: '12:10h', mandante: 'B', visitante: 'C', placarMandante: '36', placarVisitante: '68' },
+            { idM: 'j6_m', idV: 'j6_v', idH: 'j6_h', horario: '13:40h', mandante: 'A', visitante: 'D', placarMandante: '87', placarVisitante: '70' },
+            { idM: 'f1_m', idV: 'f1_v', horario: '12:10h', mandante: 'D', visitante: 'B', placarMandante: '75', placarVisitante: '36' },
+            { idM: 'f2_m', idV: 'f2_v', horario: '13:40h', mandante: 'C', visitante: 'A', placarMandante: '68', placarVisitante: '49' }
         ];
 
         function extractIndexData(source) {
             const equipesMatch = source.match(/const\s+equipes\s*=\s*{([\s\S]*?)};/);
             const jogosMatch = source.match(/const\s+estruturaJogos\s*=\s*(\[[\s\S]*?\]);/);
+            const faseFinalMatch = source.match(/const\s+estruturaFaseFinal\s*=\s*(\[[\s\S]*?\]);/);
 
-            if (!equipesMatch || !jogosMatch) {
+            if (!equipesMatch || !jogosMatch || !faseFinalMatch) {
                 throw new Error('Dados do index não encontrados');
             }
 
             return {
                 equipes: parseEquipes(equipesMatch[1]),
-                jogos: parseJogos(jogosMatch[1])
+                jogos: [...parseJogos(jogosMatch[1]), ...parseJogos(faseFinalMatch[1])]
             };
         }
 
